@@ -1,6 +1,7 @@
 # Install Ubuntu on Dell XPS
 
-A lot of inspiration came from this guide:
+Follow this great guide first.
+
 @see https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560)
 
 
