@@ -15,9 +15,9 @@ nouveau.modeset=0 nvme_load=YES
 
 ### HiDPI - Make a custom font for grub to make it readable
 
-sudo grub-mkfont --output=/boot/grub/fonts/DejaVuSansMono24.pf2 \
-  --size=24 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
-
+```sh
+sudo grub-mkfont --output=/boot/grub/fonts/DejaVuSansMono24.pf2 --size=24 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+```
 
 Put this in `/etc/default/grub`
 
