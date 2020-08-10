@@ -11,8 +11,9 @@ To even be able to install Ubuntu some boot options must be given before booting
 Add this after the `---` on the grub boot line 
 nouveau.modeset=0 nvme_load=YES
 
-## Step 2 - Set a custom font for grub to make it readable
+## Step 2 - Setup grub
 
+### HiDPI - Make a custom font for grub to make it readable
 
 sudo grub-mkfont --output=/boot/grub/fonts/DejaVuSansMono24.pf2 \
   --size=24 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
@@ -30,6 +31,22 @@ GRUB_FONT=/boot/grub/fonts/DejaVuSansMono24.pf2
 Activate the grub config:
 `sudo update-grub`
 
+### Save the last selected OS (Multi-boot)
+Put the following in `/etc/default/grub`:
+
+```sh
+sudo vim /etc/default/grub
+```
+
+```txt
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+```
+
+Activate the grub config:
+```sh
+sudo update-grub
+```
 
 ## Step 3 - Fix the double click trackpad
 
